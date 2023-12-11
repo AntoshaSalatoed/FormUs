@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Список{% endblock %}</title>
+</head>
+<body>
+{% block body %}
+    {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+    <h1>Данные которые написали пользователи</h1>
+        <table>
+            <tr>
+                <th>Текст</th>
+                <th>Почта</th>
+                <th>Цвет</th>
+                <th>Фигура</th>
+            </tr>
+            {% for item in data %}
+                <tr>
+                    <td>{{ item.textField }}</td>
+                    <td>{{ item.emailField }}</td>
+                    <td>{{ item.colorField }}</td>
+                    <td>{{ item.shapeField }}</td>
+                </tr>
+            {% endfor %}
+        </table>
+        <button> <a href="{{ path ('add_admin') }}">Добавить пользователя</a></button>
+    {%else%}
+    <h2>Войдите в начале в аккаунт!!!</h2>
+    {% endif %}
+{% endblock %}
+</body>
+</html>

@@ -1,0 +1,19 @@
+controllers:
+    resource: ../src/Controller/
+    type: attribute
+
+user_test:
+    path: /user
+    controller: App\Controller\UserController::index
+
+admin:
+    path: /admin
+    controller: App\Controller\AdminController::login
+
+add_admin:
+    path: /add
+    controller: App\Controller\RegistrationController::register
+
+table_user:
+    path: /table
+    controller: App\Controller\TableController::table

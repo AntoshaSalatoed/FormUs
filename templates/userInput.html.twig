@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Welcome!{% endblock %}</title>
+</head>
+<body>
+{% block body %}
+    <h1>Create Form</h1>
+    {{ form_start(user) }}
+    {{ form_row(user.textField) }}
+    {{ form_row(user.emailField) }}
+    {{ form_row(user.colorField) }}
+    {{ form_row(user.shapeField) }}
+    {{ form_row(user.imageField) }}
+    {{ form_end(user) }}
+{% endblock %}
+</body>
+</html>
