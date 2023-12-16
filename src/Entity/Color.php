@@ -20,6 +20,10 @@ class Color
     {
         return $this->id;
     }
+    public function __toString()
+    {
+        return $this->colorName;
+    }
 
     public function getColorName(): ?string
     {

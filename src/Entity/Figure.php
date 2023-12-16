@@ -20,6 +20,10 @@ class Figure
     {
         return $this->id;
     }
+    public function __toString()
+    {
+        return $this->figureName;
+    }
 
     public function getFigureName(): ?string
     {
